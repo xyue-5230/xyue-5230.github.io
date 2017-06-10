@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="xyue 随记 | 学习笔记">
 <meta property="og:description" content="– 基本用法：1.新建博客,运行命令：hexo new “博客标题名称”；2.根据提示找到对应的目录,用编辑器编辑.md文件；3.编辑好之后,运行命令：hexo g -d ，生成文档；4.运行本地服务器，命令：hexo s -g，在浏览器中打开http://localhost:4000/预览；5.没有问题的话，新建命令行窗口或者ctrl+c结束服务，继续运行命令：hexo d -g,回车；6.博客">
 <meta property="og:image" content="http://xyue-5230.com/2017/06/03/hexo简易用法/1.jpg">
-<meta property="og:updated_time" content="2017-06-06T15:24:45.723Z">
+<meta property="og:updated_time" content="2017-06-06T16:33:45.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 简易用法">
 <meta name="twitter:description" content="– 基本用法：1.新建博客,运行命令：hexo new “博客标题名称”；2.根据提示找到对应的目录,用编辑器编辑.md文件；3.编辑好之后,运行命令：hexo g -d ，生成文档；4.运行本地服务器，命令：hexo s -g，在浏览器中打开http://localhost:4000/预览；5.没有问题的话，新建命令行窗口或者ctrl+c结束服务，继续运行命令：hexo d -g,回车；6.博客">
@@ -27,7 +27,7 @@
   
     <link rel="icon" href="/img/favicon.ico">
   
-  <link rel="stylesheet" type="text/css" href="/./main.b3331d.css">
+  <link rel="stylesheet" type="text/css" href="/./index.css">
   <style type="text/css">
   
     #container.show {
@@ -189,7 +189,7 @@
 <p><strong>监视文件变动</strong><br>hexo generate –watch #监视文件变动</p>
 <p><strong>完成后部署</strong> (两个命令的作用是相同的)<br>hexo generate –deploy    == hexo g -d<br>hexo deploy –generate    == hexo d -g</p>
 <blockquote>
-<p>Q：如何让文章想只显示一部分和一个 阅读全文 的按钮？<br>  A：在文章中加一个 <code>&lt;!--more--&gt;</code> ， <code>&lt;!--more--&gt;</code> 后面的内容就不会显示出来了。<br>.<br>Q：如何卸载Hexo？<br>  A：3.0.0版本执行<code>npm uninstall hexo-cli -g</code>，之前版本执行<code>npm uninstall hexo -g</code>。<br>.<br>Q：如何安装旧版本Hexo？<br>  A：先卸载当前版本，以2.8.3为例，执行<code>npm install hexo@2.8.3 -g</code>，再初始化并安装依赖和插件</p>
+<p>Q：如何让文章想只显示一部分和一个 阅读全文 的按钮？<br>  A：在文章中加一个 <code>&lt;!--more--&gt;</code> ， <code>&lt;!--more--&gt;</code> 后面的内容就不会显示出来了。<br>.<br>Q：如何卸载Hexo？<br>  A：3.0.0版本执行<code>npm uninstall hexo-cli -g</code>，之前版本执行<code>npm uninstall hexo -g</code>。<br>.<br>Q：找不到git部署报错:<br>ERROR Deployer not found: git<br>  A：解决方法:<br>npm install hexo-deployer-git –save</p>
 </blockquote>
 <p>.<br><img src="1.jpg" alt="插图显示失败..." title="我只是一张插图..."></p>
 <p>— 引自 <a href="http://www.qdfuns.com/notes/14464/b9e788aa8b80e782acccbcecf716e9cf.html" target="_blank" rel="external">零基础搭建Hexo个人博客</a><br>— 摘自 <a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="external">hexo常用命令笔记</a><br>— hexo <a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">官方文档</a><br>— 此博客主题 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a></p>
@@ -438,11 +438,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
