@@ -793,16 +793,16 @@ body {
   background:url(./img/scrollbar_arrow.png) no-repeat -30px -18px
 }
 .article-entry .highlight,.article-entry pre {
-  background: #c8edcc;
+  background: #272822;
   margin:10px 0;
   padding:10px;
   overflow:auto;
-  color:#333;
+  color:#fff;
   font-size:.9em;
   line-height:22.400000000000002px
 }
 .article-entry .gist .gist-file .gist-data .line-numbers,.article-entry .highlight .gutter pre,.article-entry .highlight .gutter pre .line {
-  color:#666
+  color:#666;
 }
 .article-entry code,.article-entry pre {
   font-family:Source Code Pro,Consolas,Monaco,Menlo,monospace
@@ -857,7 +857,7 @@ body {
   text-shadow:none
 }
 .article-entry .highlight .line {
-  color:#222;
+  color:lightgreen;
   min-height:19px
 }
 .article-entry .gist {
@@ -1768,7 +1768,8 @@ pre .css~* .id,pre .id {
   padding-left:7.6923%
 }
 .article-entry p {
-  margin-top:10px
+  margin-top:10px;
+  padding-left: 1em;
 }
 .article-entry li code,.article-entry p code {
   padding: 3px;
@@ -1784,8 +1785,8 @@ pre .css~* .id,pre .id {
 .article-entry blockquote {
   padding:15px 20px;
   margin:6px 0 4px;
-  border-left:5px solid #a3c5cd;
-  background:#f6f6f6;
+  border-left:5px solid #c3edf5;
+  background: #f9fafb;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -1836,8 +1837,8 @@ pre .css~* .id,pre .id {
   font-weight:700;
   color:#574c4c;
   padding-bottom:5px;
-  padding-left:1em;
-  border-left: 3px solid #b4dae2;
+  /*padding-left:1em;*/
+  /*border-left: 3px solid #b4dae2;*/
     /*background-color: #ddd;*/
   /*border-bottom: .4px solid #ddd*/
 }
@@ -1868,8 +1869,8 @@ pre .css~* .id,pre .id {
   overflow-x:auto;
   color:#657b83;
   border:1px solid #ccc;
-  /*text-shadow:0 1px #222;*/
-    font-weight: bolder;
+  /*text-shadow:0 1px #444;*/
+  /*font-weight: bolder;*/
   font-family:Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace
 }
 .article-entry pre code {
