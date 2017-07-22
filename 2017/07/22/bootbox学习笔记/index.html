@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xyue.ltd">
-  <title>Archives: 2017/7 | xyue 随记 | 学习笔记</title>
+  <title>bootbox学习笔记 | xyue 随记 | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xyue 随记 | 学习笔记">
-<meta property="og:url" content="http://xyue.ltd/archives/2017/07/index.html">
+  <meta name="description" content="Bootbox 基于Bootstrap框架，有 警告框 / 带输入框的弹出框 / 确认框 / 自定义弹出框  四种功能。  Bootbox.js is a small JavaScript library which allows you to create programmatic dialog boxes using Bootstrap modals, without having to wo">
+<meta name="keywords" content="js,bootbox">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootbox学习笔记">
+<meta property="og:url" content="http://xyue.ltd/2017/07/22/bootbox学习笔记/index.html">
 <meta property="og:site_name" content="xyue 随记 | 学习笔记">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="Bootbox 基于Bootstrap框架，有 警告框 / 带输入框的弹出框 / 确认框 / 自定义弹出框  四种功能。  Bootbox.js is a small JavaScript library which allows you to create programmatic dialog boxes using Bootstrap modals, without having to wo">
+<meta property="og:image" content="http://xyue.ltd/2017/07/22/bootbox学习笔记/1.jpg">
+<meta property="og:updated_time" content="2017-07-22T07:31:43.336Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xyue 随记 | 学习笔记">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="bootbox学习笔记">
+<meta name="twitter:description" content="Bootbox 基于Bootstrap框架，有 警告框 / 带输入框的弹出框 / 确认框 / 自定义弹出框  四种功能。  Bootbox.js is a small JavaScript library which allows you to create programmatic dialog boxes using Bootstrap modals, without having to wo">
+<meta name="twitter:image" content="http://xyue.ltd/2017/07/22/bootbox学习笔记/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="xyue 随记 | 学习笔记" type="application/atom+xml">
   
@@ -158,36 +162,90 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-bootbox学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/22/bootbox学习笔记/" class="archive-article-date">
-  	<time datetime="2017-07-22T06:01:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/22/bootbox学习笔记/">bootbox学习笔记</a>
+    <h1 class="article-title" itemprop="name">
+      bootbox学习笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/22/bootbox学习笔记/" class="archive-article-date">
+  	<time datetime="2017-07-22T06:01:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>Bootbox</code> 基于<code>Bootstrap</code>框架，有<strong> 警告框 / 带输入框的弹出框 / 确认框 / 自定义弹出框 </strong> 四种功能。</p>
+<blockquote>
+<p>Bootbox.js is a small JavaScript library which allows you to create programmatic dialog boxes using Bootstrap modals, without having to worry about creating, managing or removing any of the required DOM elements or JS event handlers.</p>
+</blockquote>
+<p><a href="http://bootboxjs.com/documentation.html" target="_blank" rel="external">官网文档</a><br><a href="https://github.com/makeusabrew/bootbox" target="_blank" rel="external">github上</a> 目前是4k+个 Star</p>
+<h3 id="基础：引入框架（注意依赖引入顺序）"><a href="#基础：引入框架（注意依赖引入顺序）" class="headerlink" title="基础：引入框架（注意依赖引入顺序）"></a>基础：引入框架（注意依赖引入顺序）</h3><ol>
+<li>jQuery</li>
+<li>Bootstrap</li>
+<li>Bootbox</li>
+</ol>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;bootstrap.min.css&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- bootbox js依赖 --&gt;</div><div class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;bootstrap.min.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;!-- bootbox 框架 --&gt;</div><div class="line">&lt;script src=&quot;bootbox.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><p>其实也就4种方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">bootbox.alert(message, callback) <span class="comment">// 警告框</span></div><div class="line">bootbox.prompt(message, callback)  <span class="comment">// 带输入框的弹出框</span></div><div class="line">bootbox.confirm(message, callback)  <span class="comment">// 确认框 </span></div><div class="line"></div><div class="line">bootbox.dialog(options)  <span class="comment">// 自定义弹出框</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="以下是详细解释这4种用法："><a href="#以下是详细解释这4种用法：" class="headerlink" title="以下是详细解释这4种用法："></a>以下是详细解释这4种用法：</h2><p><strong>效果图 见官网文档链接</strong></p>
+<h3 id="用框架仅需一行代码-Hello-world"><a href="#用框架仅需一行代码-Hello-world" class="headerlink" title="用框架仅需一行代码 Hello world!"></a>用框架仅需一行代码 Hello world!</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bootbox.alert(&quot;Hello world!&quot;);</div></pre></td></tr></table></figure>
+<h3 id="对比：不用这个框架要写以下如此长代码实现："><a href="#对比：不用这个框架要写以下如此长代码实现：" class="headerlink" title="对比：不用这个框架要写以下如此长代码实现："></a>对比：不用这个框架要写以下如此长代码实现：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">&lt;!-- set up the modal to start hidden and fade <span class="keyword">in</span> and out --&gt;</div><div class="line">&lt;div id="myModal" class="modal fade"&gt;</div><div class="line">  &lt;div class="modal-dialog"&gt;</div><div class="line">    &lt;div class="modal-content"&gt;</div><div class="line">      &lt;!-- dialog body --&gt;</div><div class="line">      &lt;div class="modal-body"&gt;</div><div class="line">        &lt;button type="button" class="close" data-dismiss="modal"&gt;&amp;times;&lt;/button&gt;</div><div class="line">        Hello world!</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;!-- dialog buttons --&gt;</div><div class="line">      &lt;div class="modal-footer"&gt;&lt;button type="button" class="btn btn-primary"&gt;OK&lt;/button&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;!-- sometime later, probably inside your on load event callback --&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    $("#myModal").on("show", function() &#123;    // wire up the OK button to dismiss the modal when shown</div><div class="line">        $("#myModal a.btn").on("click", function(e) &#123;</div><div class="line">            console.log("button pressed");   // just as an example...</div><div class="line">            $("#myModal").modal('hide');     // dismiss the dialog</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">    $("#myModal").on("hide", function() &#123;    // remove the event listeners when the dialog is dismissed</div><div class="line">        $("#myModal a.btn").off("click");</div><div class="line">    &#125;);</div><div class="line">    </div><div class="line">    $("#myModal").on("hidden", function() &#123;  // remove the actual elements from the DOM when fully hidden</div><div class="line">        $("#myModal").remove();</div><div class="line">    &#125;);</div><div class="line">    </div><div class="line">    $("#myModal").modal(&#123;                    // wire up the actual modal functionality and show the dialog</div><div class="line">      "backdrop"  : "static",</div><div class="line">      "keyboard"  : true,</div><div class="line">      "show"      : true                     // ensure the modal is shown immediately</div><div class="line">    &#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="带输入框的弹出框"><a href="#带输入框的弹出框" class="headerlink" title="带输入框的弹出框"></a>带输入框的弹出框</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">bootbox.prompt(&quot;请输入用户名：&quot;,function (a) &#123;</div><div class="line">    console.log(&apos;您的用户名为 &apos; + a);  // a为输入框中的值</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="确认框"><a href="#确认框" class="headerlink" title="确认框"></a>确认框</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">bootbox.confirm(&apos;确定删除？&apos;,function (a) &#123;</div><div class="line">    console.log(a); // 布尔值 true、false</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="自定义弹出框"><a href="#自定义弹出框" class="headerlink" title="自定义弹出框"></a>自定义弹出框</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var dialog = bootbox.dialog(&#123;</div><div class="line">    title: &apos;标题&apos;,</div><div class="line">    message: &apos;&lt;p class=&quot;text-center&quot;&gt;请稍候...&lt;/p&gt;&apos;,</div><div class="line">    closeButton: 0,  // 右上角关闭按钮开关</div><div class="line">    size: &apos;small&apos;,   // 弹出框大小尺寸 另一个参数 large</div><div class="line">    className: &apos;bb-alternate-modal&apos;, // 可在此类名上自定义动画</div><div class="line">    backdrop: true, // 半透明背景点击关闭开关</div><div class="line">    callback: function (a) &#123;</div><div class="line">        console.log(a);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// 2秒后隐藏弹出框</div><div class="line">setTimeout(function () &#123;</div><div class="line">    dialog.modal(&apos;hide&apos;);</div><div class="line">&#125;,2000);</div></pre></td></tr></table></figure>
+<h4 id="一些参数："><a href="#一些参数：" class="headerlink" title="一些参数："></a>一些参数：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">bootbox.confirm(&#123;</div><div class="line">    title: &quot;确定删除?&quot;,</div><div class="line">    message: &quot;即将删除....&quot;,</div><div class="line">    backdrop: 1, // 半透明背景点击关闭开关</div><div class="line">    onEscape: 1, // 键盘左上角esc键 开关</div><div class="line">    closeButton: 0, // 右上角关闭按钮开关</div><div class="line">    size: &apos;small&apos;, // 弹出框尺寸</div><div class="line">    animate: 1,   // 弹出框动画 默认就是 true</div><div class="line">    className: &apos;bb-alternate-modal&apos;, // 可自定义动画</div><div class="line"></div><div class="line">    buttons: &#123;</div><div class="line">        cancel: &#123;</div><div class="line">            label: &apos;取消&apos;</div><div class="line">        &#125;,</div><div class="line">        confirm: &#123;</div><div class="line">            label: &apos;确定&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    callback: function (result) &#123;</div><div class="line">        console.log(&apos;你的选择是: &apos; + result);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="全局设置："><a href="#全局设置：" class="headerlink" title="全局设置："></a>全局设置：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">bootbox.setDefaults(&#123; // 全局设置</div><div class="line">    size: &apos;small&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>就是这些了，OVER ! </p>
+<p><img src="1.jpg" alt="欣赏"></p>
+<p>总结自：<a href="http://bootboxjs.com/documentation.html" target="_blank" rel="external">官网文档</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你要请我吃糖果? TKS~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb-ecode1.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx-ecode1.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -203,115 +261,100 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://xyue.ltd/2017/07/22/bootbox学习笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/17/文字图标与文字对齐与CSS清除样式/" class="archive-article-date">
-  	<time datetime="2017-07-17T14:01:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-17</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/17/文字图标与文字对齐与CSS清除样式/">文字图标与文字对齐 | CSS清除样式</a>
-    </h1>
+  
+    <a href="/2017/07/17/文字图标与文字对齐与CSS清除样式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文字图标与文字对齐 | CSS清除样式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://xyue.ltd/2017/07/22/bootbox学习笔记/", 
+    sourceId: "bootbox学习笔记",
+    productKey: "d7831439227c4d3a803def9a57938de1",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文字图标</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/07/Gulp构建项目总结/" class="archive-article-date">
-  	<time datetime="2017-07-07T14:01:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/07/Gulp构建项目总结/">使用Gulp构建项目总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">gulp</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">bower</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">angular</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">angular-ui-router</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -334,8 +377,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
