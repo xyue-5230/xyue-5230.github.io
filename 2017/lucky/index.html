@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖小程序 | xyue</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 600px;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+        .box ul{
+            margin:0;
+            padding:0;
+        }
+        .box ul li{
+            width: 200px;
+            height: 200px;
+            font-size: 100px;
+            line-height: 200px;
+            text-align: center;
+            float: left;
+            list-style:none;
+            background-color: #ddd;
+            color: #eee;
+        }
+        .box .cur{
+            font-family: "Courier New", Courier, monospace ;
+            font-size: 60px;
+            cursor: pointer;
+            background-color: #00ffff;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p>点击‘抽奖’开始，祝君好运...</p>
+    <ul id="ulTag">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>8</li>
+        <li onclick="game()" class="cur">抽奖</li>
+        <li>4</li>
+        <li>7</li>
+        <li>6</li>
+        <li>5</li>
+    </ul>
+</div>
+<script>
+    var ulTag = document.querySelector('#ulTag');
+    var lis = ulTag.getElementsByTagName('li');
+
+    var colorArr = ['deepskyblue','orange','#b9ffff','#f40','#98ff98','#fcc','violet'];
+    var numArr = [0,1,2,5,8,7,6,3];
+    var i = 0 ;
+    lis[0].style.backgroundColor = 'red';
+    function randomColor() {
+
+        if(i%8 == 0){
+            lis[0].style.backgroundColor = 'red';
+            lis[3].style.backgroundColor = '#ddd';
+            lis[4].style.backgroundColor = colorArr[i%7];
+        }else {
+            lis[numArr[i%8]].style.backgroundColor = 'red';
+            lis[numArr[(i-1)%8]].style.backgroundColor = '#ddd';
+        }
+        i++;
+    }
+    function game() {
+        var timer = setInterval(randomColor,50);
+        var ran = Math.round((Math.random()*2+2)*1000) ;
+        setTimeout(function () {
+            clearInterval(timer);
+        },ran);
+    }
+
+</script>
+</body>
+</html>
